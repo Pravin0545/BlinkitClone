@@ -23,7 +23,9 @@ app.use(
 );
 
 const PORT = process.env.PORT;
-
+app.get("/", (req, res, next) => {
+  res.json({ message: "server is running" });
+});
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
 });
